@@ -31,7 +31,12 @@ export const Course = () => {
     return (
         <div className="gap-3 grid grid-cols-2 sm:grid-cols-5">
         {courses?.map((item, index) => (
-            <Card shadow="sm" key={index} isPressable className="max-w-[50]">
+            <Card
+                shadow="sm" 
+                key={index} 
+                isPressable 
+                className="max-w-[50]"
+            >
                 <CardBody className="overflow-visible p-0 px-2 py-2">
                     <Image
                     shadow="sm"

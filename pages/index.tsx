@@ -1,4 +1,5 @@
 import { Course } from "@/components/course";
+import { SearchBar } from "@/components/searchBar";
 import { title, subtitle} from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { useEffect, useState } from 'react';
@@ -31,11 +32,11 @@ export default function IndexPage() {
 					<h4 className={subtitle({ class: "mt-4" })}>
 					Online platform for learning to code from scratch.
 					</h4>
-					<div className="px-20">
+					<div className="py-5 md:px-20">
+						<SearchBar />
 						<Course />
 					</div>
 				</div>
-				
 			</section>
 		</DefaultLayout>
 	);
