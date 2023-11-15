@@ -1,29 +1,17 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "ByteLearn - Unlock Your Potential",
+	description: "Online platform where developers can access a wide range of online courses.",
 	navItems: [
 		{
-			label: "Home",
-			href: "/",
+		label: "Courses",
+		href: "/courses",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+		{
+		label: "Categories",
+		href: "/categories",
+		}
 	],
 	navMenuItems: [
 		{
@@ -60,10 +48,6 @@ export const siteConfig = {
 		},
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui-docs-v2.vercel.app",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
+		github: "https://github.com/ericcasane/learning-platform-frontend"
 	},
 };
