@@ -1,4 +1,4 @@
-import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
+import {Card, CardBody, Image, Link} from "@nextui-org/react";
 import { useEffect, useState } from 'react';
 
 export const Course = () => {    
@@ -31,6 +31,7 @@ export const Course = () => {
     return (
         <div className="gap-3 grid grid-cols-2 sm:grid-cols-5">
         {courses?.map((item, index) => (
+            <Link href={`/course/${item.id}`} key={index}>
             <Card
                 shadow="sm" 
                 key={index} 
@@ -46,10 +47,11 @@ export const Course = () => {
                     className="w-full object-cover h-[140px]"
                     src={item.imageUrl}
                     />
-                    <h3 className="overflow-ellipsis overflow-hidden whitespace-nowrap">{item.title}</h3>
+                    <h3 className="overflow-ellipsis overflow-hidden whitespace-nowrap py-2">{item.title}</h3>
                     <p className="text-default-500">{item.currentPrice} €</p>
                 </CardBody>
             </Card>
+            </Link>
         ))}
         </div>
     );

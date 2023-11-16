@@ -84,6 +84,9 @@ export const Navbar = () => {
 				</NavbarItem>
 				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
 				<NavbarItem className="hidden md:flex">
+					<NextLink
+						href={siteConfig.links.login}
+					>
 					<Button
 						isExternal
 						as={Link}
@@ -91,7 +94,7 @@ export const Navbar = () => {
 						variant="flat"
 					>
 						Log in
-					</Button>
+					</Button></NextLink>
 				</NavbarItem>
 			</NavbarContent>
 

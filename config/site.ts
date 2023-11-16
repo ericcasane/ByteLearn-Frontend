@@ -48,6 +48,7 @@ export const siteConfig = {
 		},
 	],
 	links: {
-		github: "https://github.com/ericcasane/learning-platform-frontend"
+		github: "https://github.com/ericcasane/learning-platform-frontend",
+		login: "/login",
 	},
 };
