@@ -1,9 +1,16 @@
 import {Card, CardBody, Image, Link} from "@nextui-org/react";
 import { useEffect, useState } from 'react';
 
+interface Course {
+    id: number;
+    title: string;
+    imageUrl: string;
+    currentPrice: number;
+}
+
 export const Course = () => {    
     const USER_API_BASE_URL = 'http://localhost:8080/courses';
-    const [courses, setCourses] = useState(null);
+    const [courses, setCourses] = useState<Course[] | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
