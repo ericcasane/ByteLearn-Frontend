@@ -1,7 +1,7 @@
-import { Course } from "@/components/course";
+import { Course } from "@/components/courseCard";
 import { SearchBar } from "@/components/searchBar";
 import { title, subtitle} from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
+import Layout from "@/layouts/default";
 import { useEffect, useState } from 'react';
 
 export default function IndexPage() {
@@ -20,7 +20,7 @@ export default function IndexPage() {
 	console.log(data);
    
 	return (
-		<DefaultLayout>
+		<Layout>
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 				<div className="inline-block text-center justify-center">
 					<h1 className={title()}>Unlock Your </h1>
@@ -38,6 +38,6 @@ export default function IndexPage() {
 					</div>
 				</div>
 			</section>
-		</DefaultLayout>
+		</Layout>
 	);
 }

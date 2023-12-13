@@ -1,10 +1,10 @@
-import DefaultLayout from "@/layouts/default";
+import Layout from "@/layouts/default";
 
 export default function Categories() {
     return (
-        <DefaultLayout>
+        <Layout>
 	
-        </DefaultLayout >
+        </Layout >
     );
 
 }

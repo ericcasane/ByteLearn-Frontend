@@ -9,7 +9,7 @@ interface Course {
 }
 
 export const Course = () => {    
-    const USER_API_BASE_URL = 'http://localhost:8080/courses';
+    const USER_API_BASE_URL = 'https://erjose-api-bytelearn-api.azuremicroservices.io/courses';
     const [courses, setCourses] = useState<Course[] | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -33,8 +33,6 @@ export const Course = () => {
         fetchCourses();
     }, []);
 
-
-    console.log(courses);
     return (
         <div className="gap-3 grid grid-cols-2 sm:grid-cols-5">
         {courses?.map((item, index) => (
