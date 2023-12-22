@@ -1,5 +1,6 @@
 import {Card, CardBody, Image, Link} from "@nextui-org/react";
 import { useEffect, useState } from 'react';
+import { useApiGET } from '../utils/apiUtils';
 
 interface Course {
     id: number;
@@ -8,34 +9,16 @@ interface Course {
     currentPrice: number;
 }
 
-export const Course = () => {    
-    const USER_API_BASE_URL = 'https://erjose-api-bytelearn-api.azuremicroservices.io/courses';
-    const [courses, setCourses] = useState<Course[] | null>(null);
-    const [loading, setLoading] = useState(true);
+interface CourseProps {
+    page?: number;
+}
 
-    useEffect(() => {
-        const fetchCourses = async () => {
-            setLoading(true);
-            try {
-                const response = await fetch(USER_API_BASE_URL, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                const courses = await response.json();
-                setCourses(courses);
-            } catch (error) {
-                console.log(error);
-            }
-            setLoading(false);
-        };
-        fetchCourses();
-    }, []);
+export const Course = ({ page }: CourseProps) => {    
+    const { data: courses } = useApiGET(`courses${page ? `?page=${page}` : ''}`);
 
     return (
         <div className="gap-3 grid grid-cols-2 sm:grid-cols-5">
-        {courses?.map((item, index) => (
+        {courses?.map((item: Course, index: number) => (
             <Link href={`/course/${item.id}`} key={index}>
             <Card
                 shadow="sm" 

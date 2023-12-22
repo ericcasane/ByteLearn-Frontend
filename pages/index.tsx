@@ -16,8 +16,6 @@ export default function IndexPage() {
 		  setLoading(false)
 		})
 	}, [])
-
-	console.log(data);
    
 	return (
 		<Layout>
@@ -33,7 +31,6 @@ export default function IndexPage() {
 					Online platform for learning to code from scratch.
 					</h4>
 					<div className="py-5 md:px-20">
-						<SearchBar />
 						<Course />
 					</div>
 				</div>

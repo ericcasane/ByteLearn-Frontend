@@ -11,7 +11,7 @@ export default function Layout({
 		<div className="relative flex flex-col h-screen">
 			<Head />
 			<Navbar />
-			<main className="container mx-auto px-30 flex-grow">
+			<main className="container mx-auto px-5 flex-grow md:w-4/5">
 				{children}
 			</main>
 			<footer className="w-full flex items-center justify-center py-3">

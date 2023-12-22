@@ -2,11 +2,14 @@ import { useState } from 'react';
 import Layout from "@/layouts/default";
 import { Course } from "@/components/courseCard";
 import { Pagination, Input, CheckboxGroup, Checkbox, Divider } from "@nextui-org/react"
+import { useApiGET } from '@/utils/apiUtils';
 
 export default function Courses() {
     const [searchTerm, setSearchTerm] = useState('');
     const [category, setCategory] = useState('');
     const [language, setLanguage] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+
     
     const categories = [
         {label: "JavaScript"},
@@ -21,10 +24,14 @@ export default function Courses() {
     const languages = [
         {label: "English"},
         {label: "Spanish"},
-        {label: "Catalan"},
+        {label: "Catala"},
         {label: "French"},
         {label: "German"},
     ];
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+    }
 
     return (
         <Layout>
@@ -55,8 +62,10 @@ export default function Courses() {
                     </CheckboxGroup>
                 </div>
                 <div className="w-3/4 p-4">
-                    <Course />
-                    <Pagination total={10} initialPage={1}/> 
+                    <Course page={currentPage}/>
+                    <div className="flex justify-center pt-4">
+                        <Pagination total={5} initialPage={1} onChange={handlePageChange}/> 
+                    </div>
                 </div>
             </div>
         </Layout>
