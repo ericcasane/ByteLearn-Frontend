@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Layout from "@/layouts/default";
-import { Menu } from '@/components/account/DropdownMenu';
+import { Menu } from '@/components/account/dropdownMenu';
 
 export default function Account() {
     const router = useRouter();

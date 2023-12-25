@@ -14,7 +14,8 @@ interface CourseProps {
 }
 
 export const Course = ({ page }: CourseProps) => {    
-    const { data: courses } = useApiGET(`courses${page ? `?page=${page}` : ''}`);
+    const { data: course } = useApiGET(`courses${page ? `?page=${page}` : ''}`);
+    const courses = course || [];
 
     return (
         <div className="gap-3 grid grid-cols-2 sm:grid-cols-5">
