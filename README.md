@@ -19,7 +19,19 @@ It connects to the ByteLearn backend, which is developed with Spring Boot.
 - List of Courses
 - Course Details
 - Search Courses
+- Dark and Light Mode
 - Other features
+
+## Images of the frontend
+
+### Home Page
+![Home Page](./frontend_images/ByteLearn_Homepage.png)
+
+### Course Details
+![Course Details](./frontend_images/ByteLearn_CourseDetails.png)
+
+### Search Courses
+![Search Courses](./frontend_images/ByteLearn_SearchCourses.png)
 
 ## Cloning the Repository
 
