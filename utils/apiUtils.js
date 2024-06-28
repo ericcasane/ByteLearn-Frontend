@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { redirect } from 'next/navigation'
 
-const baseUrl = "https://erjose-api-bytelearn-api.azuremicroservices.io/";
-//const baseUrl = "http://localhost:8080/"
+//const baseUrl = "https://erjose-api-bytelearn-api.azuremicroservices.io/";
+const baseUrl = "http://localhost:8080/"
 
 export function useApiGET(route) {
     const [data, setData] = useState(null);

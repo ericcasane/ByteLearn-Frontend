@@ -25,6 +25,11 @@ It connects to the ByteLearn backend, which is developed with Spring Boot.
 ## Images of the frontend
 
 ### Home Page
+
+#### Light Mode
+![Home Page](./frontend_images/ByteLearn_Homepage_Light.png)
+
+#### Dark Mode
 ![Home Page](./frontend_images/ByteLearn_Homepage.png)
 
 ### Course Details

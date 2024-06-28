@@ -57,7 +57,7 @@ const CourseInfo = ({ course }: { course: Course }) => {
 };
 
 export async function getServerSideProps({ params }: { params: { id: string } }) {
-    const res = await fetch(`https://erjose-api-bytelearn-api.azuremicroservices.io/courses/${params.id}`);
+    const res = await fetch(`http://localhost:8080/courses/${params.id}`);
     const course = await res.json();
 
     return {
